@@ -11,55 +11,57 @@
 #include <string>    // std::string, std::getline
 #include <vector>    // std::vector
 
-std::vector<std::string> (std::vector<std::string> name)
-{
+// std::vector<std::string> (std::vector<std::string> name)
+// {
     
-    int curr_index = 0
-    while (count < size)
-    {
-        if 
-        {
-            append(user_song, )
-        }
-    }
+//     int curr_index = 0
+//     while (count < size)
+//     {
+//         if 
+//         {
+//             append(user_song, )
+//         }
+//     }
 
-    return user_song
-}
+//     return user_song
+// }
 
 int TotalDuration (std::vector<int> duration)
 {
     int total = 0;
-    int sum = 0;
-    int new_value = 0 
-    while (duration.size() != 1)
+    int curr_index = 0;
+    while (curr_index < duration.size())
     {
-        if (curr_index + 1 < duration.size())
-        {
-            new_value = duration[curr_index] + duration[curr_index + 1];
-            sum = new_value + duration[curr_index];
-            total = sum; 
-        }
-        
+        total = total + duration[curr_index];
+        curr_index = curr_index + 1;
     }
     return total;
 
 }
 
-
-
-
-if (choice = y)
+int AvgDuration (std::vector<int> duration)
 {
-    count = count + 1;
+    int average = 0;
+    TotalDuration % duration.size();
+
+    return average;
 }
 
-   int times ()
-   {
-    if (choice == "y")
-        {
-            count = count + 1; 
-        }
-   }
+
+
+
+// if (choice = y)
+// {
+//     count = count + 1;
+// }
+
+//    int times ()
+//    {
+//     if (choice == "y")
+//         {
+//             count = count + 1; 
+//         }
+//    }
 
 
 
@@ -73,11 +75,10 @@ int main()
     std::vector<std::string> user_song = {};
 
 
-    // times = ()
-    int count = 0
-    int length = 0
-
     std::string choice = "y";
+
+    int total = ();
+    int average = ();
 
     if (choice != "n")
     {
@@ -97,7 +98,12 @@ int main()
 
         std::cout << "\nWould you like to enter another song? (y/n)\n";
         std::cin >> choice;
+
+        {
+            std::cout << total << ", " << average << std::endl;  
+        }
       
     }
+
     return 0;
 }
