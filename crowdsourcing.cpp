@@ -39,12 +39,9 @@ int TotalDuration (std::vector<int> duration)
 
 }
 
-int AvgDuration (std::vector<int> duration)
+double AvgDuration (std::vector<int> list)
 {
-    int average = 0;
-    TotalDuration % duration.size();
-
-    return average;
+   return (double) TotalDuration(list) / length(list);
 }
 
 
@@ -73,12 +70,14 @@ int main()
     // write your code here
    
     std::vector<std::string> user_song = {};
+    std::vector<std::string> user_artist = {};
+    std::vector<int> user_duration = {};
 
 
     std::string choice = "y";
 
-    int total = ();
-    int average = ();
+    // int total = ();
+    // int average = ();
 
     if (choice != "n")
     {
@@ -87,23 +86,29 @@ int main()
         std::cout << "\nEnter the song's title: "; 
         std::string name; 
         std::cin >> name;
+        append(user_song, name); //appending the name into the list of the names
 
         std::cout << "\nEnter the artist: ";
         std::string artist;
         std::cin >> artist;
+        append(user_artist, artist);
 
         std::cout << "\nDuration of song (in seconds): ";
-        std::int duration;
-        std::cin >> duration; 
+        int duration;
+        std::cin >> duration;
+        append(user_duration, duration);
 
         std::cout << "\nWould you like to enter another song? (y/n)\n";
         std::cin >> choice;
 
-        {
-            std::cout << total << ", " << average << std::endl;  
-        }
+        // {
+        //     std::cout << total << ", " << average << std::endl;  
+        // }
       
     }
+
+
+    std::cout << "Total Duration: " << TotalDuration(user_duration) << "\nAverage Duration: " << AvgDuration << std::endl;
 
     return 0;
 }
